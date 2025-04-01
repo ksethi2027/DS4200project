@@ -1,95 +1,113 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
-    width: 90%;
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
+    background-color: #f4f8fb;
     color: #333;
-    background-color: #f8f9fa;
     line-height: 1.6;
 }
 
-
+/* Headings */
 h1 {
-    font-size: 2rem;
     text-align: center;
-    color: #007bff;
+    color: #1a5276;
+    font-size: 32px;
+    font-weight: 600;
 }
 
 h2 {
-    font-size: 1.6rem;
+    color: #154360;
+    font-size: 26px;
     margin-top: 20px;
-    color: #0056b3;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #1a5276;
     padding-bottom: 5px;
 }
 
-
+/* Paragraphs */
 p {
-    font-size: 1rem;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
+/* Links */
+a {
+    color: #1a5276;
+    text-decoration: none;
+    font-weight: 600;
+}
 
+a:hover {
+    color: #117a8b;
+    text-decoration: underline;
+}
+
+/* Table Styling */
 .tg {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    background: #ffffff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.tg th,
-.tg td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
+    margin-top: 15px;
+    background-color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .tg th {
-    background-color: #007bff;
+    background-color: #1a5276;
     color: white;
-    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
 }
 
+.tg td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
 
+.tg tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Centering elements */
 .center {
     display: flex;
     justify-content: center;
 }
 
-
+/* Map and Text Section */
 .container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    margin-top: 20px;
+    gap: 30px;
+    align-items: flex-start;
 }
 
-
-img {
-    max-width: 100%;
-    height: auto;
+.container img {
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-
-a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        width: 95%;
+    }
+    
     .container {
         flex-direction: column;
+        gap: 15px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 22px;
     }
 }
