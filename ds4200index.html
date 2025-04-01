@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" >
+    </head>
+    <body>
+        <h1>Air Quality in India: Analyzing Trends, Pollution Causes, and Health Impacts</h1>
+        <h2>Introduction:</h2>
+        <p>Air pollution is a big environmental and health problem in India, with cities frequently experiencing hazardous air 
+            quality due to industrial emissions, traffic, and urbanization. These poor conditions often lead to respiratory and 
+            cardiovascular diseases. The Air Quality Index (AQI) provides a comprehensive measure of pollution levels, categorizing 
+            air quality from “Good” to “Severe” based on factors like PM2.5, PM10, NO2, and SO2. Understanding these trends is crucial 
+            for raising awareness and helping fix the problem. </p>
+            
+            <p>This project aims to analyze air quality trends in India from January 2020 to December 2024, using historical data to 
+                identify pollution patterns. By exploring major pollution sources through data visualization, we aim to provide meaningful 
+                insights that can support data-driven solutions for cleaner air and healthier communities.</p> 
+
+            To learn more about air pollution trends in India you can visit <a href="https://www.nytimes.com/2024/11/19/world/asia/india-delhi-air-pollution.html">The New York Times</a>
+            & <a href = "https://www.iqair.com/us/india?srsltid=AfmBOopkXbs-XpKIBsbRIQ4mwsbmo0tMe85vsgOyLnLyfRsDmxQp9rzx ">IQAir</a>
+
+        <h2>Introduction to the Data:</h2>
+        <p>The dataset we selected, from Kaggle.com, provides comprehensive air quality data for major cities across India, covering the period from 2015 to 2024.
+            It includes key air pollution indicators such as the Air Quality Index (AQI) and the concentration levels of harmful pollutants.
+            The dataset is sourced from publicly available air quality monitoring stations across multiple cities in India. 
+            The dataset tracks air quality across 25 major Indian cities, including Delhi, Mumbai, Kolkata, Chennai, Bengaluru, Hyderabad, etc.
+            We hope to gain more insights on what cities are at higher health risks and potential causes of the pollutants. 
+        </p>
+        <div class="center">
+            <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-0lax">Variables</th>
+                    <th class="tg-0lax">Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-0lax">City</td>
+                    <td class="tg-0lax">Names of the different cities</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax">Datetime</td>
+                    <td class="tg-0lax">The date that the data was recorded</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax">PM2.5</td>
+                    <td class="tg-0lax">Fine particle matter that adds to the air pollution (smaller than 2.5 micrometers in diameter)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax">PM10</td>
+                    <td class="tg-0lax">Particle matter that adds to the air pollution (10 micrometers or less in diameter)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax">NO</td>
+                    <td class="tg-0lax">Concentration of Nitric Oxide in the air. A colorless gas coming from vehicles and power plants</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax">NO2</td>
+                    <td class="tg-0lax">Concentration of Nitrogen Dioxide. Toxic gas that causes smog formation</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax">NOx</td>
+                    <td class="tg-0lax">Total concentration of NO & NO2 combined</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax">NH3</td>
+                    <td class="tg-0lax">Concentration of Ammonia in the air. Gas released from agricultural activities. Forms harmful fine particulate matter.</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax">CO</td>
+                    <td class="tg-0lax">Carbon Monoxide level in milligrams. Gas that reduces oxygen delivery in the body.</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax">SO2</td>
+                    <td class="tg-0lax">Concentration of Sulfur Dioxide in the air. Gas released from burning fossil fuels, irritating human health.</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax">O3</td>
+                    <td class="tg-0lax">Concentration of Ozone in the air. Harmful gas that can cause respiratory issues. </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax">AQI</td>
+                    <td class="tg-0lax">The Air Quality Index. A total score representing the overall air pollution levels. </td>
+                  </tr>
+                </tbody>
+                </table>
+            </div>
+
+            <h2>Map of India and AQI Bucket Levels:</h2>
+            <p>This is a Map of India with different marking based on the cities most common AQI Bucket Level</p>
+            <img src="map.png" width="500" height="500">
+
+            <h2>CO Levels in Major Indian Cities</h2>
+            <p>This interactive chart displays Carbon Monoxide (CO) levels across different cities in India.</p>
+            <iframe src="co_levels_chart.html" width="100%" height="500px" style="border:none;"></iframe>
+    </body>
+</html>
