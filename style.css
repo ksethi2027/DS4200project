@@ -92,6 +92,15 @@ a:hover {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Map Description Text */
+.map-description {
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
@@ -111,3 +120,4 @@ a:hover {
         font-size: 22px;
     }
 }
+
