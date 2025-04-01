@@ -1,0 +1,31 @@
+.tg {
+    border-collapse: collapse;
+}
+
+.tg td {
+    border-color: black;
+    border-style: solid;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 5px;
+
+}
+
+.tg th {
+    border-color: black;
+    border-style: solid;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 5px;
+
+}
+
+.tg .tg-0lax {
+    text-align: center;
+}
+
+.center {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
