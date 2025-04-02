@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-e60b0013747449de9ef267a330dc954d"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "City", "legend": null, "type": "nominal"}, "column": {"field": "Year", "type": "nominal"}, "tooltip": [{"field": "City", "type": "nominal"}, {"field": "Value", "type": "quantitative"}], "x": {"field": "City", "title": "City", "type": "nominal"}, "y": {"field": "Value", "title": "Total Concentration of NO and NO2", "type": "quantitative"}}, "params": [{"name": "param_28", "select": {"type": "point", "fields": ["Year"]}, "bind": {"input": "select", "options": ["2020", "2021", "2022", "2023", "2024"], "name": "Year"}}, {"name": "param_29", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "transform": [{"filter": {"param": "param_28"}}], "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-e60b0013747449de9ef267a330dc954d": [{"City": "Bangalore", "Year": "2020", "Value": 129.715027}, {"City": "Chennai", "Year": "2020", "Value": 125.811749}, {"City": "Delhi", "Year": "2020", "Value": 127.0}, {"City": "Kolkata", "Year": "2020", "Value": 129.196175}, {"City": "Mumbai", "Year": "2020", "Value": 120.994262}, {"City": "Bangalore", "Year": "2021", "Value": 122.643014}, {"City": "Chennai", "Year": "2021", "Value": 120.726301}, {"City": "Delhi", "Year": "2021", "Value": 121.747945}, {"City": "Kolkata", "Year": "2021", "Value": 128.301918}, {"City": "Mumbai", "Year": "2021", "Value": 117.986849}, {"City": "Bangalore", "Year": "2022", "Value": 129.01726}, {"City": "Chennai", "Year": "2022", "Value": 133.458082}, {"City": "Delhi", "Year": "2022", "Value": 126.365479}, {"City": "Kolkata", "Year": "2022", "Value": 121.826575}, {"City": "Mumbai", "Year": "2022", "Value": 125.06274}, {"City": "Bangalore", "Year": "2023", "Value": 124.240274}, {"City": "Chennai", "Year": "2023", "Value": 126.351781}, {"City": "Delhi", "Year": "2023", "Value": 124.336438}, {"City": "Kolkata", "Year": "2023", "Value": 127.909863}, {"City": "Mumbai", "Year": "2023", "Value": 130.509315}, {"City": "Bangalore", "Year": "2024", "Value": 126.168306}, {"City": "Chennai", "Year": "2024", "Value": 123.61694}, {"City": "Delhi", "Year": "2024", "Value": 124.758743}, {"City": "Kolkata", "Year": "2024", "Value": 130.408197}, {"City": "Mumbai", "Year": "2024", "Value": 122.036612}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
