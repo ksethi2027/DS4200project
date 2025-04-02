@@ -9,8 +9,8 @@ body {
     background-color: #f4f8fb;
     color: #333;
     line-height: 1.6;
-    border: 5px solid #1a5276; /* Added border */
-    border-radius: 10px; /* Rounded corners */
+    border: 5px solid #1a5276;
+    border-radius: 10px;
 }
 
 /* Headings */
@@ -48,10 +48,16 @@ a:hover {
 }
 
 /* Table Styling */
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
 .tg {
     width: 100%;
+    max-width: 800px;
     border-collapse: collapse;
-    margin-top: 15px;
     background-color: white;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -61,7 +67,7 @@ a:hover {
 .tg th {
     background-color: #1a5276;
     color: white;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
     font-size: 16px;
 }
@@ -69,7 +75,8 @@ a:hover {
 .tg td {
     border: 1px solid #ddd;
     padding: 10px;
-    text-align: center;
+    text-align: left;
+    font-size: 14px;
 }
 
 .tg tr:nth-child(even) {
@@ -85,7 +92,7 @@ a:hover {
 /* Map and Text Section */
 .container {
     display: flex;
-    flex-direction: column; /* Change to column to stack items vertically */
+    flex-direction: column;
     align-items: center;
     gap: 20px;
 }
@@ -116,5 +123,14 @@ a:hover {
     
     h2 {
         font-size: 22px;
+    }
+    
+    .tg {
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    .tg th, .tg td {
+        padding: 8px;
     }
 }
