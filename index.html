@@ -57,25 +57,18 @@
         </table>
     </div>
 
-    <!-- AQI Map Section -->
-    <h2>Map of India and AQI Bucket Levels:</h2>
-    <p>This is a Map of India with different markings based on the cities' most common AQI Bucket Level.</p>
     <div class="map-container">
-        <img src="map.png" width="100%" height="auto" alt="India Map with AQI Buckets">
+        <h2>Map of India and AQI Bucket Levels:</h2>
+        <p>This is a Map of India with different markings based on the cities' most common AQI Bucket Level.</p>
+        <img src="map.png" alt="India Map with AQI Buckets">
+        <p class="map-description">
+            This map shows the most common air quality conditions experienced in major Indian cities over the past 5 years. By highlighting the dominant AQI category in each of the cities, we can visually compare which cities frequently face high pollution levels. For example, in Chennai and Bangalore, the air quality is often "Very Poor" or "Severe".
+        </p>
+        <p class="map-description">
+            By mapping this data, we can observe how factors like climate, traffic, and population impact long-term pollution trends. The colored stars correspond to different AQI categories, as shown in the legend, allowing for quick comparisons across India.
+        </p>
     </div>
 
-    <p class="map-description">
-        This map shows the most common air quality conditions experienced in major Indian cities over the past 5 years.
-        By highlighting the dominant AQI category in each of the cities, we can visually compare which cities frequently
-        face high pollution levels. For example, in Chennai and Bangalore, the air quality is often "Very Poor" or "Severe".
-        In the more coastal cities such as Mumbai and Kolkata, the air quality levels are better.
-    </p>
-    <p class="map-description">
-        By mapping this data, we can observe how factors like climate, traffic, and population impact long-term pollution trends. The colored 
-        stars correspond to different AQI categories, as shown in the legend, allowing for quick comparisons across India.
-    </p>
-
-    <!-- CO Levels Section -->
     <h2>CO Levels in Major Indian Cities</h2>
     <p>This interactive chart displays Carbon Monoxide (CO) levels across different cities in India.</p>
     <iframe src="co_levels_chart.html" width="100%" height="500px" style="border:none;"></iframe>
@@ -83,26 +76,14 @@
     <p class="chart-description">
         This line chart visualizes the trends in Carbon Monoxide (CO) levels across major Indian cities over time. 
         By selecting a specific city from the dropdown menu, users can explore monthly fluctuations in CO concentrations from 2020 to 2024. 
-
-        The chart highlights how CO levels vary by location, revealing patterns influenced by factors such as industrial activity, vehicular 
-        emissions, and seasonal changes. For instance, cities with high traffic congestion may exhibit consistently elevated CO levels, 
-        whereas those with stricter emission controls might show lower averages. 
-
-        By analyzing this data, we can gain insights into long-term pollution trends and the effectiveness of air quality management policies 
-        in different regions.
+        The chart highlights how CO levels vary by location, revealing patterns influenced by factors such as industrial activity, vehicular emissions, and seasonal changes. For instance, cities with high traffic congestion may exhibit consistently elevated CO levels, whereas those with stricter emission controls might show lower averages.
     </p>
 
-    <!-- O3 Levels Section -->
     <h2>Average O3 Levels</h2>
     <div id="barplot"></div>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="final.js"></script>  
-
-    <p>The bar plot visualizes the average O3 (ozone) levels across five major Indian cities—Kolkata, Delhi, Mumbai, Bangalore, and Chennai—showing that the values are nearly identical, with only slight variations. This consistency suggests that ozone pollution is driven by common factors across these cities, such as vehicle emissions, industrial activity, and climate conditions that contribute to ozone formation. Since O3 is a key component of smog and has significant health impacts, understanding these patterns is crucial.</p>
-    
-    <p>The O3 levels appear to be around 100, which is relatively high and could pose health risks. According to air quality standards, prolonged exposure to 
-        ozone levels above this threshold can lead to respiratory issues and other serious health concerns, particularly for vulnerable populations. This visualization supports our broader analysis of air quality trends in India by identifying
-        cities with elevated ozone concentrations and emphasizing the need for stricter pollution control measures to mitigate health risks and improve air quality.</p>
-
+    <p>The bar plot visualizes the average O3 (ozone) levels across five major Indian cities—Kolkata, Delhi, Mumbai, Bangalore, and Chennai—showing that the values are nearly identical, with only slight variations. This consistency suggests that ozone pollution is driven by common factors across these cities, such as vehicle emissions, industrial activity, and climate conditions that contribute to ozone formation. Since O3 is a key component of smog and has significant health impacts, understanding these patterns is crucial. </p>
+    <p>The O3 levels appear to be around 100, which is relatively high and could pose health risks. According to air quality standards, prolonged exposure to ozone levels above this threshold can lead to respiratory issues and other serious health concerns, particularly for vulnerable populations. This visualization supports our broader analysis of air quality trends in India by identifying cities with elevated ozone concentrations and emphasizing the need for stricter pollution control measures to mitigate health risks and improve air quality.</p>
 </body>
 </html>
