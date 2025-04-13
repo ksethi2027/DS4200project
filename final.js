@@ -1,4 +1,4 @@
-//average O3 levels for each city
+// Average O3 levels for each city
 const data = [
     { city: "Kolkata", O3: 101.99 },
     { city: "Delhi", O3: 101.42 },
@@ -8,7 +8,7 @@ const data = [
 ];
 
 // Define dimensions and margins
-const width = 600, height = 400, margin = { top: 50, right: 50, bottom: 50, left: 60 };
+const width = 700, height = 450, margin = { top: 50, right: 50, bottom: 60, left: 70 };
 
 // Create the SVG container
 const svg = d3.select("#barplot")
@@ -20,7 +20,7 @@ const svg = d3.select("#barplot")
 const x = d3.scaleBand()
     .domain(data.map(d => d.city))
     .range([margin.left, width - margin.right])
-    .padding(0.4);
+    .padding(0.3);
 
 const y = d3.scaleLinear()
     .domain([0, d3.max(data, d => d.O3)])
@@ -37,8 +37,8 @@ svg.append("g")
     .attr("y", d => y(d.O3))
     .attr("height", d => height - margin.bottom - y(d.O3))
     .attr("width", x.bandwidth())
-    .attr("fill", "steelblue");
-
+    .attr("fill", "skyblue"); 
+    
 // Add values on top of bars
 svg.append("g")
     .selectAll(".bar-label")
@@ -68,9 +68,11 @@ svg.append("g")
 // Add chart title
 svg.append("text")
     .attr("x", width / 2)
-    .attr("y", 20)
+    .attr("y", margin.top / 2)
     .attr("text-anchor", "middle")
-    .style("font-size", "16px")
+    .style("font-size", "18px")
+    .style("font-family", "Arial, sans-serif")
+    .style("font-weight", "bold")
     .text("Average O3 Levels by City");
 
 // X-axis label
@@ -78,6 +80,8 @@ svg.append("text")
     .attr("x", width / 2)
     .attr("y", height - 10)
     .attr("text-anchor", "middle")
+    .style("font-size", "14px")
+    .style("font-family", "Arial, sans-serif")
     .attr("class", "axis-label")
     .text("City");
 
@@ -85,23 +89,32 @@ svg.append("text")
 svg.append("text")
     .attr("transform", "rotate(-90)")
     .attr("x", -height / 2)
-    .attr("y", 15)
+    .attr("y", 20)
     .attr("text-anchor", "middle")
+    .style("font-size", "14px")
+    .style("font-family", "Arial, sans-serif")
     .attr("class", "axis-label")
-    .text("O3 Level");
+    .text("O3 Level (μg/m³)");
 
-// Add legend
-const legend = svg.append("g")
-    .attr("transform", `translate(${width - 130}, ${margin.top})`);
+const globalAverageO3 = 25;
 
-legend.append("rect")
-    .attr("width", 15)
-    .attr("height", 15)
-    .attr("fill", "steelblue");
+// Add a line for the global average O3 level
+svg.append("line")
+    .attr("x1", margin.left)
+    .attr("x2", width - margin.right)
+    .attr("y1", y(globalAverageO3))
+    .attr("y2", y(globalAverageO3))
+    .attr("stroke", "firebrick")  
+    .attr("stroke-width", 3)
+    .attr("stroke-dasharray", "5,5");
 
-legend.append("text")
-    .attr("x", 20)
-    .attr("y", 12)
-    .text("O3 Level")
-    .attr("alignment-baseline", "middle")
-    .attr("font-size", "12px");
+// Add label for the global average line
+svg.append("text")
+    .attr("x", width - 10)
+    .attr("y", y(globalAverageO3) - 5)
+    .attr("text-anchor", "end")
+    .style("fill", "firebrick")
+    .style("font-size", "14px")
+    .style("font-family", "Arial, sans-serif")
+    .text(`Global Avg O3: ${globalAverageO3} μg/m³`);
+
