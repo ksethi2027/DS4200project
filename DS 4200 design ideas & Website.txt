@@ -1,5 +1,5 @@
 ﻿Group 7: Arpitha Coorg, Diva Chhabra, Kashish Sethi, Komal Jain
-
+Link to the website: https://ksethi2027.github.io/DS4200project/
 
 Map of India w/ AQI Levels Design Idea:
 For this visualization I used GeoPandas and Matplotlib to create a geographic representation of air quality in major Indian cities. Each city is marked with a star, which color is based on the most frequently recorded AQI category in our dataset. The purpose of this visualization was to display long-term pollution trends by simplifying multiple AQI records into one value per city. I chose custom colors to reflect the severity of the air quality; Green for Good, Beige for Satisfactory, Yellow for Moderate, Purple for Poor, Red for Very Poor, and Black for Severe. I also added a legend to the side of the map to make it easier for the reader to identify the different AQI levels. I added labels to each of the cities to increase readability and provide a clear and concise map. 
